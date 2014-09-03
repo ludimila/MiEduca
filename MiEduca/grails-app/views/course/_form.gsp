@@ -18,6 +18,22 @@
 	<g:textArea name="description" cols="40" rows="5" maxlength="5000" required="" value="${courseInstance?.description}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'publishDate', 'error')} required">
+	<label for="publishDate">
+		<g:message code="course.publishDate.label" default="Publish Date" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:formatDate format="dd/MM/yyyy" date="${courseInstance.publishDate}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'lastEditDate', 'error')} required">
+	<label for="lastEditDate">
+		<g:message code="course.lastEditDate.label" default="Last Edit Date" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:formatDate format="dd/MM/yyyy" date="${courseInstance?.lastEditDate}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'coursePhoto', 'error')} required">
 	<label for="coursePhoto">
 		<g:message code="course.coursePhoto.label" default="Course Photo" />

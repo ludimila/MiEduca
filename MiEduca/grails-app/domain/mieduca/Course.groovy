@@ -1,27 +1,31 @@
 package mieduca
+import java.text.SimpleDateFormat  
+
 
 class Course {
 
 
-	int id
 	String name
 	String description
 	byte[] coursePhoto
 	int points
-	Date publishDate
-	Date lastEditDate
 
+	//def sdf = new SimpleDateFormat("MM/dd/yyyy")  
+	//Date nowDate = new Date()
+	Date publishDate = new Date()
+
+	Date lastEditDate  = new Date()
+ 	//Date.parse("MMM dd yyyy", publishDate)
 	// static hasMany : [lessons:Lesson]
 	static belongsTo = [Area, Rank]
 
 
     static constraints = {
 
-    	id unique:true, editable: false
     	name size: 5..100, blank: false
     	description size: 15..5000, blank:false
-    	publishDate max:new Date(), editable: false , display: false, format: 'yyyy-MM-dd'
-    	lastEditDate  max:new Date(), editable: false, display: false, format: 'yyyy-MM-dd'
+    	publishDate editable: false , display: true, format: 'dd/MM/yyyy'
+    	lastEditDate editable: false, display: true, format: 'dd/MM/yyyy' 
     	points editable: false, display : false
 
     	coursePhoto maxSize : 1024 * 1024 * 2
