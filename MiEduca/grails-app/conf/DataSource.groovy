@@ -15,25 +15,20 @@ environments {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:mysql://localhost/mieduca?useUnicode=yes&characterEncoding=UTF-8"
-            username = "root"
-            password = "root"
         }   
 
     }
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost/mieduca?useUnicode=yes&characterEncoding=UTF-8"
-            username = "root"
-            password = "root"
+            url = "jdbc:mysql://localhost/mieduca?useUnicode=yes&characterEncoding=UTF-8" 
         }
     }
     production {
         dataSource {
             dbCreate = "update"
             url = "jdbc:mysql://localhost/mieduca?useUnicode=yes&characterEncoding=UTF-8"
-            username = "root"
-            password = "root"
+           
             pooled = true
             properties {
                maxActive = -1
