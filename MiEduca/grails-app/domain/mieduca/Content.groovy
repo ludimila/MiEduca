@@ -3,13 +3,13 @@ package mieduca
 class Content {
 
 	//Lesson lesson
-	Byte [] data
-	Integer type
+	byte [] data
+	int type
 
 
     static constraints = {
 
     	type unique:true, editable: false
-    	data unique:false
-   }
+    	data maxSize: 1024*1024*10
+	}
 }
