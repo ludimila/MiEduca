@@ -1,6 +1,9 @@
 package mieduca
 
-class User {
+import org.grails.rateable.*
+
+class User implements Rateable {
+
 
 	String userName
 	String email
