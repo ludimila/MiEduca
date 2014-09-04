@@ -23,16 +23,7 @@
 		<g:message code="lesson.questions.label" default="Questions" />
 		
 	</label>
-	
-<ul class="one-to-many">
-<g:each in="${lessonInstance?.questions?}" var="q">
-    <li><g:link controller="question" action="show" id="${q.id}">${q?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="question" action="create" params="['lesson.id': lessonInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'question.label', default: 'Question')])}</g:link>
-</li>
-</ul>
-
+	<g:select name="questions" from="${mieduca.Question.list()}" multiple="multiple" optionKey="id" size="5" value="${lessonInstance?.questions*.id}" class="many-to-many"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: lessonInstance, field: 'contents', 'error')} ">

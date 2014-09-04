@@ -6,7 +6,7 @@ class Lesson {
 	Course course
 	String description
 
-	static belongsTo = [Course]
+	static belongsTo = Course
 
 	static hasMany = [questions:Question, contents: Content]
 

@@ -3,12 +3,12 @@ package mieduca
 class Question {
 
 	String statement
-	Integer answer
-	Lesson lesson
+	String answer
 
 	def options = new ArrayList(4)
 
-	static belongsTo = [Lesson]
+	static belongsTo = Lesson
+
 
 
     static constraints = {
