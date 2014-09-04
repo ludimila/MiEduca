@@ -13,6 +13,7 @@ class Person extends User{
     	email email:true, blank:false, unique:true
     	points editable: false, display: false
     	photo maxSize: 1024 * 1024 * 10
+    	webPage url:true
     }
 
 }

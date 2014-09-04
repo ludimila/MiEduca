@@ -9,7 +9,7 @@ class Content {
 
     static constraints = {
 
-    	type unique:true , inList:["Imagem","Video","Pdf","Texto"], nullable:false , blank:false
+    	type unique:true , inList:["Imagem","Vídeo","PDF","Texto"], nullable:false , blank:false
     	data maxSize: 1024*1024*10, minSize: 1, nullable: false , blank:false
 	}
 }
