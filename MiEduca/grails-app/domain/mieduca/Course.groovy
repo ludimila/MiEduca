@@ -25,8 +25,9 @@ class Course {
     	publishDate editable: false , display: true, format: 'dd/MM/yyyy'
     	lastEditDate editable: false, display: true, format: 'dd/MM/yyyy'
     	points editable: false, display : false
-
-
     }
 
+    String toString(){
+        name
+    }
 }

@@ -16,4 +16,8 @@ class Question {
     	correctAnswer blank:false, nullable:false
 
     }
+
+    String toString(){
+    	statement
+    }
 }

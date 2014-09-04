@@ -11,6 +11,9 @@ class AnswerOption {
 
     	number nullable:false, blank:false
     	text nullable:false, blank:false, minSize:2
+    }
 
+    String toString(){
+    	number
     }
 }

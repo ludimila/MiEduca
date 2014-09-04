@@ -16,4 +16,7 @@ class Person extends User{
     	webPage url:true
     }
 
+    String toString(){
+    	username
+    }
 }

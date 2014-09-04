@@ -12,4 +12,8 @@ class Area {
     	name nullable:false, blank:false, size:2..50
 
     }
+
+    String toString(){
+    	name
+    }
 }

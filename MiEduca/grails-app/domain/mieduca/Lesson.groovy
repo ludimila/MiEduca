@@ -14,7 +14,9 @@ class Lesson {
     	description minSize: 15, blank:false
     	contents nullable:false, blank: false
     	questions nullable: false, blank: false
+    }
 
-
+    String toString(){
+        name
     }
 }
