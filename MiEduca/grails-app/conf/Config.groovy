@@ -59,6 +59,9 @@ grails.exceptionresolver.params.exclude = ['password']
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 
+grails.plugin.springsecurity.logout.postOnly = false
+grails.plugins.springsecurity.securityConfigType = "Annotation"
+
 grails.rateable.rater.evaluator = {session.user} 
 
 environments {
@@ -90,4 +93,11 @@ log4j = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+
+          debug 'SpringSecurityTwitterGrailsPlugin'
 }
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'mieduca.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'mieduca.UserRole'
+grails.plugins.springsecurity.authority.className = 'mieduca.Role'
