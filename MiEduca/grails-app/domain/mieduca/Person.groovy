@@ -1,11 +1,10 @@
 package mieduca
 
-class Person {
+class Person extends User{
 	
 	String email
 	int points = 0
 	String webPage
-	User user
 
 	static belongsTo = Rank
 

@@ -24,13 +24,17 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="username" title="${message(code: 'person.username.label', default: 'Username')}" />
+					
+						<g:sortableColumn property="password" title="${message(code: 'person.password.label', default: 'Password')}" />
+					
 						<g:sortableColumn property="email" title="${message(code: 'person.email.label', default: 'Email')}" />
 					
 						<g:sortableColumn property="points" title="${message(code: 'person.points.label', default: 'Points')}" />
 					
-						<th><g:message code="person.user.label" default="User" /></th>
+						<g:sortableColumn property="accountExpired" title="${message(code: 'person.accountExpired.label', default: 'Account Expired')}" />
 					
-						<g:sortableColumn property="webPage" title="${message(code: 'person.webPage.label', default: 'Web Page')}" />
+						<g:sortableColumn property="accountLocked" title="${message(code: 'person.accountLocked.label', default: 'Account Locked')}" />
 					
 					</tr>
 				</thead>
@@ -38,13 +42,17 @@
 				<g:each in="${personInstanceList}" status="i" var="personInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${personInstance.id}">${fieldValue(bean: personInstance, field: "email")}</g:link></td>
+						<td><g:link action="show" id="${personInstance.id}">${fieldValue(bean: personInstance, field: "username")}</g:link></td>
+					
+						<td>${fieldValue(bean: personInstance, field: "password")}</td>
+					
+						<td>${fieldValue(bean: personInstance, field: "email")}</td>
 					
 						<td>${fieldValue(bean: personInstance, field: "points")}</td>
 					
-						<td>${fieldValue(bean: personInstance, field: "user")}</td>
+						<td><g:formatBoolean boolean="${personInstance.accountExpired}" /></td>
 					
-						<td>${fieldValue(bean: personInstance, field: "webPage")}</td>
+						<td><g:formatBoolean boolean="${personInstance.accountLocked}" /></td>
 					
 					</tr>
 				</g:each>
