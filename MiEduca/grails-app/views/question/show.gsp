@@ -23,11 +23,22 @@
 			</g:if>
 			<ol class="property-list question">
 			
-				<g:if test="${questionInstance?.answer}">
+				<g:if test="${questionInstance?.correctAnswer}">
 				<li class="fieldcontain">
-					<span id="answer-label" class="property-label"><g:message code="question.answer.label" default="Answer" /></span>
+					<span id="correctAnswer-label" class="property-label"><g:message code="question.correctAnswer.label" default="Correct Answer" /></span>
 					
-						<span class="property-value" aria-labelledby="answer-label"><g:fieldValue bean="${questionInstance}" field="answer"/></span>
+						<span class="property-value" aria-labelledby="correctAnswer-label"><g:link controller="answerOption" action="show" id="${questionInstance?.correctAnswer?.id}">${questionInstance?.correctAnswer?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${questionInstance?.options}">
+				<li class="fieldcontain">
+					<span id="options-label" class="property-label"><g:message code="question.options.label" default="Options" /></span>
+					
+						<g:each in="${questionInstance.options}" var="o">
+						<span class="property-value" aria-labelledby="options-label"><g:link controller="answerOption" action="show" id="${o.id}">${o?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

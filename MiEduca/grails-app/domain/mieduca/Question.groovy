@@ -3,10 +3,9 @@ package mieduca
 class Question {
 
 	String statement
-	String answer
+	AnswerOption correctAnswer
 
-	def options = new ArrayList(4)
-
+	static hasMany = [options:AnswerOption]
 	static belongsTo = Lesson
 
 
