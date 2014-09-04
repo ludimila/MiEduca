@@ -18,12 +18,28 @@
 	<g:textArea name="description" cols="40" rows="5" maxlength="5000" required="" value="${courseInstance?.description}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'coursePhoto', 'error')} required">
+	<label for="coursePhoto">
+		<g:message code="course.coursePhoto.label" default="Course Photo" />
+		<span class="required-indicator">*</span>
+	</label>
+	<input type="file" id="coursePhoto" name="coursePhoto" />
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'lessons', 'error')} required">
+	<label for="lessons">
+		<g:message code="course.lessons.label" default="Lessons" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select name="lessons" from="${mieduca.Lesson.list()}" multiple="multiple" optionKey="id" size="5" required="" value="${courseInstance?.lessons*.id}" class="many-to-many"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'publishDate', 'error')} required">
 	<label for="publishDate">
 		<g:message code="course.publishDate.label" default="Publish Date" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:formatDate format="dd/MM/yyyy" date="${courseInstance.publishDate}"/>
+	${courseInstance?.publishDate?.toString()}
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'lastEditDate', 'error')} required">
@@ -31,14 +47,6 @@
 		<g:message code="course.lastEditDate.label" default="Last Edit Date" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:formatDate format="dd/MM/yyyy" date="${courseInstance?.lastEditDate}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: courseInstance, field: 'coursePhoto', 'error')} required">
-	<label for="coursePhoto">
-		<g:message code="course.coursePhoto.label" default="Course Photo" />
-		<span class="required-indicator">*</span>
-	</label>
-	<input type="file" id="coursePhoto" name="coursePhoto" />
+	${courseInstance?.lastEditDate?.toString()}
 </div>
 

@@ -41,6 +41,24 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${courseInstance?.coursePhoto}">
+				<li class="fieldcontain">
+					<span id="coursePhoto-label" class="property-label"><g:message code="course.coursePhoto.label" default="Course Photo" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${courseInstance?.lessons}">
+				<li class="fieldcontain">
+					<span id="lessons-label" class="property-label"><g:message code="course.lessons.label" default="Lessons" /></span>
+					
+						<g:each in="${courseInstance.lessons}" var="l">
+						<span class="property-value" aria-labelledby="lessons-label"><g:link controller="lesson" action="show" id="${l.id}">${l?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${courseInstance?.publishDate}">
 				<li class="fieldcontain">
 					<span id="publishDate-label" class="property-label"><g:message code="course.publishDate.label" default="Publish Date" /></span>
@@ -64,13 +82,6 @@
 					<span id="points-label" class="property-label"><g:message code="course.points.label" default="Points" /></span>
 					
 						<span class="property-value" aria-labelledby="points-label"><g:fieldValue bean="${courseInstance}" field="points"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${courseInstance?.coursePhoto}">
-				<li class="fieldcontain">
-					<span id="coursePhoto-label" class="property-label"><g:message code="course.coursePhoto.label" default="Course Photo" /></span>
 					
 				</li>
 				</g:if>

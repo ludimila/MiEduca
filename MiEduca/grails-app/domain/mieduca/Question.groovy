@@ -11,5 +11,9 @@ class Question {
 
 
     static constraints = {
+    	statement blank:false, minSize: 5
+    	options blank:false , nullable: false
+    	correctAnswer blank:false, nullable:false
+
     }
 }

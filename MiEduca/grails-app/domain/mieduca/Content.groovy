@@ -4,12 +4,12 @@ class Content {
 
 	//Lesson lesson
 	byte [] data
-	int type
+	String type
 
 
     static constraints = {
 
-    	type unique:true, editable: false
-    	data maxSize: 1024*1024*10
+    	type unique:true , inList:["Imagem","Video","Pdf","Texto"], nullable:false , blank:false
+    	data maxSize: 1024*1024*10, minSize: 1, nullable: false , blank:false
 	}
 }

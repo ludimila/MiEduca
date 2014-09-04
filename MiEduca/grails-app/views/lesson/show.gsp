@@ -41,17 +41,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${lessonInstance?.questions}">
-				<li class="fieldcontain">
-					<span id="questions-label" class="property-label"><g:message code="lesson.questions.label" default="Questions" /></span>
-					
-						<g:each in="${lessonInstance.questions}" var="q">
-						<span class="property-value" aria-labelledby="questions-label"><g:link controller="question" action="show" id="${q.id}">${q?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${lessonInstance?.contents}">
 				<li class="fieldcontain">
 					<span id="contents-label" class="property-label"><g:message code="lesson.contents.label" default="Contents" /></span>
@@ -63,11 +52,13 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${lessonInstance?.course}">
+				<g:if test="${lessonInstance?.questions}">
 				<li class="fieldcontain">
-					<span id="course-label" class="property-label"><g:message code="lesson.course.label" default="Course" /></span>
+					<span id="questions-label" class="property-label"><g:message code="lesson.questions.label" default="Questions" /></span>
 					
-						<span class="property-value" aria-labelledby="course-label"><g:link controller="course" action="show" id="${lessonInstance?.course?.id}">${lessonInstance?.course?.encodeAsHTML()}</g:link></span>
+						<g:each in="${lessonInstance.questions}" var="q">
+						<span class="property-value" aria-labelledby="questions-label"><g:link controller="question" action="show" id="${q.id}">${q?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

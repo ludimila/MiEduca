@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list question">
 			
-				<g:if test="${questionInstance?.correctAnswer}">
+				<g:if test="${questionInstance?.statement}">
 				<li class="fieldcontain">
-					<span id="correctAnswer-label" class="property-label"><g:message code="question.correctAnswer.label" default="Correct Answer" /></span>
+					<span id="statement-label" class="property-label"><g:message code="question.statement.label" default="Statement" /></span>
 					
-						<span class="property-value" aria-labelledby="correctAnswer-label"><g:link controller="answerOption" action="show" id="${questionInstance?.correctAnswer?.id}">${questionInstance?.correctAnswer?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="statement-label"><g:fieldValue bean="${questionInstance}" field="statement"/></span>
 					
 				</li>
 				</g:if>
@@ -43,11 +43,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${questionInstance?.statement}">
+				<g:if test="${questionInstance?.correctAnswer}">
 				<li class="fieldcontain">
-					<span id="statement-label" class="property-label"><g:message code="question.statement.label" default="Statement" /></span>
+					<span id="correctAnswer-label" class="property-label"><g:message code="question.correctAnswer.label" default="Correct Answer" /></span>
 					
-						<span class="property-value" aria-labelledby="statement-label"><g:fieldValue bean="${questionInstance}" field="statement"/></span>
+						<span class="property-value" aria-labelledby="correctAnswer-label"><g:link controller="answerOption" action="show" id="${questionInstance?.correctAnswer?.id}">${questionInstance?.correctAnswer?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

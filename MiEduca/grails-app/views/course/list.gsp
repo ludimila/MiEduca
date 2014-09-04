@@ -28,13 +28,13 @@
 					
 						<g:sortableColumn property="description" title="${message(code: 'course.description.label', default: 'Description')}" />
 					
+						<g:sortableColumn property="coursePhoto" title="${message(code: 'course.coursePhoto.label', default: 'Course Photo')}" />
+					
 						<g:sortableColumn property="publishDate" title="${message(code: 'course.publishDate.label', default: 'Publish Date')}" />
 					
 						<g:sortableColumn property="lastEditDate" title="${message(code: 'course.lastEditDate.label', default: 'Last Edit Date')}" />
 					
 						<g:sortableColumn property="points" title="${message(code: 'course.points.label', default: 'Points')}" />
-					
-						<g:sortableColumn property="coursePhoto" title="${message(code: 'course.coursePhoto.label', default: 'Course Photo')}" />
 					
 					</tr>
 				</thead>
@@ -46,13 +46,13 @@
 					
 						<td>${fieldValue(bean: courseInstance, field: "description")}</td>
 					
+						<td>${fieldValue(bean: courseInstance, field: "coursePhoto")}</td>
+					
 						<td><g:formatDate date="${courseInstance.publishDate}" /></td>
 					
 						<td><g:formatDate date="${courseInstance.lastEditDate}" /></td>
 					
 						<td>${fieldValue(bean: courseInstance, field: "points")}</td>
-					
-						<td>${fieldValue(bean: courseInstance, field: "coursePhoto")}</td>
 					
 					</tr>
 				</g:each>

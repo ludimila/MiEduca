@@ -24,9 +24,9 @@
 				<thead>
 					<tr>
 					
-						<th><g:message code="question.correctAnswer.label" default="Correct Answer" /></th>
-					
 						<g:sortableColumn property="statement" title="${message(code: 'question.statement.label', default: 'Statement')}" />
+					
+						<th><g:message code="question.correctAnswer.label" default="Correct Answer" /></th>
 					
 					</tr>
 				</thead>
@@ -34,9 +34,9 @@
 				<g:each in="${questionInstanceList}" status="i" var="questionInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${questionInstance.id}">${fieldValue(bean: questionInstance, field: "correctAnswer")}</g:link></td>
+						<td><g:link action="show" id="${questionInstance.id}">${fieldValue(bean: questionInstance, field: "statement")}</g:link></td>
 					
-						<td>${fieldValue(bean: questionInstance, field: "statement")}</td>
+						<td>${fieldValue(bean: questionInstance, field: "correctAnswer")}</td>
 					
 					</tr>
 				</g:each>
