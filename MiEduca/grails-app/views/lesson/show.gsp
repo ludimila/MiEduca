@@ -25,7 +25,7 @@
 			
 				<g:if test="${lessonInstance?.name}">
 				<li class="fieldcontain">
-					<span id="name-label" class="property-label"><g:message code="lesson.name.label" default="Name" /></span>
+					<span id="name-label" class="property-label"><g:message code="lesson.name.label" default="Nome" /></span>
 					
 						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${lessonInstance}" field="name"/></span>
 					
@@ -34,7 +34,7 @@
 			
 				<g:if test="${lessonInstance?.description}">
 				<li class="fieldcontain">
-					<span id="description-label" class="property-label"><g:message code="lesson.description.label" default="Description" /></span>
+					<span id="description-label" class="property-label"><g:message code="lesson.description.label" default="Descrição" /></span>
 					
 						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${lessonInstance}" field="description"/></span>
 					
@@ -43,7 +43,7 @@
 			
 				<g:if test="${lessonInstance?.contents}">
 				<li class="fieldcontain">
-					<span id="contents-label" class="property-label"><g:message code="lesson.contents.label" default="Contents" /></span>
+					<span id="contents-label" class="property-label"><g:message code="lesson.contents.label" default="Conteúdo" /></span>
 					
 						<g:each in="${lessonInstance.contents}" var="c">
 						<span class="property-value" aria-labelledby="contents-label"><g:link controller="content" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
@@ -54,7 +54,7 @@
 			
 				<g:if test="${lessonInstance?.questions}">
 				<li class="fieldcontain">
-					<span id="questions-label" class="property-label"><g:message code="lesson.questions.label" default="Questions" /></span>
+					<span id="questions-label" class="property-label"><g:message code="lesson.questions.label" default="Questõess" /></span>
 					
 						<g:each in="${lessonInstance.questions}" var="q">
 						<span class="property-value" aria-labelledby="questions-label"><g:link controller="question" action="show" id="${q.id}">${q?.encodeAsHTML()}</g:link></span>

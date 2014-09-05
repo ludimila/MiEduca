@@ -4,7 +4,7 @@
 	<head>
 		<g:render template="bootstrap"/>
 
-		<g:set var="entityName" value="${message(code: 'person.label', default: 'Person')}" />
+		<g:set var="entityName" value="${message(code: 'person.label', default: 'Pessoa')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
 	<body>

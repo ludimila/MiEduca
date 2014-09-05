@@ -25,7 +25,7 @@
 			
 				<g:if test="${contentInstance?.type}">
 				<li class="fieldcontain">
-					<span id="type-label" class="property-label"><g:message code="content.type.label" default="Type" /></span>
+					<span id="type-label" class="property-label"><g:message code="content.type.label" default="Tipo" /></span>
 					
 						<span class="property-value" aria-labelledby="type-label"><g:fieldValue bean="${contentInstance}" field="type"/></span>
 					
@@ -34,7 +34,7 @@
 			
 				<g:if test="${contentInstance?.data}">
 				<li class="fieldcontain">
-					<span id="data-label" class="property-label"><g:message code="content.data.label" default="Data" /></span>
+					<span id="data-label" class="property-label"><g:message code="content.data.label" default="Dado" /></span>
 					
 				</li>
 				</g:if>
