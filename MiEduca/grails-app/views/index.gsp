@@ -6,7 +6,7 @@
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
-				border: .2em solid #fff;
+				border: .2em solid #030005;
 				margin: 2em 2em 1em;
 				padding: 1em;
 				width: 12em;

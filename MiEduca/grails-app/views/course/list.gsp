@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'course.label', default: 'Course')}" />
+		<g:set var="entityName" value="${message(code: 'course.label', default: 'Curso')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
@@ -24,17 +24,17 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="name" title="${message(code: 'course.name.label', default: 'Name')}" />
+						<g:sortableColumn property="name" title="${message(code: 'course.name.label', default: 'Nome')}" />
 					
-						<g:sortableColumn property="description" title="${message(code: 'course.description.label', default: 'Description')}" />
+						<g:sortableColumn property="description" title="${message(code: 'course.description.label', default: 'Descrição')}" />
 					
 						<g:sortableColumn property="coursePhoto" title="${message(code: 'course.coursePhoto.label', default: 'Course Photo')}" />
 					
-						<g:sortableColumn property="publishDate" title="${message(code: 'course.publishDate.label', default: 'Publish Date')}" />
+						<g:sortableColumn property="publishDate" title="${message(code: 'course.publishDate.label', default: 'Data de publicação')}" />
 					
-						<g:sortableColumn property="lastEditDate" title="${message(code: 'course.lastEditDate.label', default: 'Last Edit Date')}" />
+						<g:sortableColumn property="lastEditDate" title="${message(code: 'course.lastEditDate.label', default: 'Data da última edição')}" />
 					
-						<g:sortableColumn property="points" title="${message(code: 'course.points.label', default: 'Points')}" />
+						<g:sortableColumn property="points" title="${message(code: 'course.points.label', default: 'Pontos')}" />
 					
 					</tr>
 				</thead>
