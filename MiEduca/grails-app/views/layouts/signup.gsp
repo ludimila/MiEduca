@@ -68,7 +68,7 @@
            				 </div>
 
            				 <div class="form-group">
-             				 <button class="btn btn-theme btn-lg btn-block">Entrar</button>
+             				 <button class="btn btn-theme btn-lg btn-block">Cadastrar</button>
             			</div>
 
           </form>

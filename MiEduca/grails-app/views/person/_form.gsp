@@ -1,44 +1,52 @@
 <%@ page import="mieduca.Person" %>
 
 <div id="header">
-  	<div class="container">
-  		<div class="row">
-  			
         	<div class="col-lg-6">
   				<h1 class="text-center">Cadastre-se</h1>
 
 				<div class=" ${hasErrors(bean: personInstance, field: 'username', 'error')} required">
-				
-					<g:textField name="username" required="" value="${personInstance?.username}"/>
+				    <div class="form-group">
+                      <input type="text" class="form-control input-lg" placeholder="Nome" name="username" required="" value="${personInstance?.username}">
+                    </div>
 				</div>
 
 				<div class=" ${hasErrors(bean: personInstance, field: 'password', 'error')} required">
-						<g:message code="person.password.label" default="Password" />
-					<g:textField name="password" required="" value="${personInstance?.password}"/>
+				    <div class="form-group">
+              			<input type="password" class="form-control input-lg" placeholder="Senha" name="password" required="" value="${personInstance?.password}">
+           			</div>
 				</div>
 
 				<div class=" ${hasErrors(bean: personInstance, field: 'email', 'error')} required">
-						<g:message code="person.email.label" default="Email" />
-					<g:field type="email" name="email" required="" value="${personInstance?.email}"/>
+					<div class="form-group">
+        				<input type="email" class="form-control input-lg" placeholder="E-mail" name="email" required="" value="${personInstance?.email}">
+    				</div>
 				</div>
-
+				
+				
 				<div class=" ${hasErrors(bean: personInstance, field: 'photo', 'error')} required">
-						<g:message code="person.photo.label" default="Photo" />
-					<input type="file" id="photo" name="photo" />
-				</div>
+					<div class="form-group">
+                      <input type="file" class="form-control input-lg" placeholder="Pagina da Web" id="photo" name="photo" />
+                    </div>
+				</div>  
 
+				<!--
 				<div class=" ${hasErrors(bean: personInstance, field: 'enabled', 'error')} ">
-						<g:message code="person.enabled.label" default="Enabled" />
-					<g:checkBox name="enabled" value="${true}" />
-				</div>
 
+					<g:checkBox name="enabled" value="${true}" />
+				</div> -->
+
+				<!-- URL
 				<div class=" ${hasErrors(bean: personInstance, field: 'webPage', 'error')} ">
-						<g:message code="person.webPage.label" default="Web Page" />
-					<g:textField name="webPage" value="${personInstance?.webPage}"/>
-				</div>
+					<div class="form-group">
+                      <input type="text" class="form-control input-lg" placeholder="Pagina da Web" name="webPage" value="${personInstance?.webPage}">
+                    </div>
+				</div> -->
+
+				<div class="form-group">
+             		<button class="btn btn-theme btn-lg btn-block" name="create" value="${message(default: 'Create')}">Cadastrar</button>
+            	</div>
+
         	</div> <!-- Fim div col lg 06-->
-        </div> <!-- Fim div row-->
-    </div><!-- Fim div container-->
 </div><!-- Fim div header-->
   
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
