@@ -28,7 +28,7 @@
 					
 						<g:sortableColumn property="description" title="${message(code: 'course.description.label', default: 'Descrição')}" />
 					
-						<g:sortableColumn property="coursePhoto" title="${message(code: 'course.coursePhoto.label', default: 'Course Photo')}" />
+						<g:sortableColumn property="coursePhoto" title="${message(code: 'course.coursePhoto.label', default: 'Imagem do curso')}" />
 					
 						<g:sortableColumn property="publishDate" title="${message(code: 'course.publishDate.label', default: 'Data de publicação')}" />
 					

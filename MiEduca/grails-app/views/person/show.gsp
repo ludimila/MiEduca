@@ -25,7 +25,7 @@
 			
 				<g:if test="${personInstance?.username}">
 				<li class="fieldcontain">
-					<span id="username-label" class="property-label"><g:message code="person.username.label" default="Username" /></span>
+					<span id="username-label" class="property-label"><g:message code="person.username.label" default="Usuário" /></span>
 					
 						<span class="property-value" aria-labelledby="username-label"><g:fieldValue bean="${personInstance}" field="username"/></span>
 					

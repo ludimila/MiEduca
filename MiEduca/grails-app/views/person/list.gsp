@@ -26,8 +26,7 @@
 					
 						<g:sortableColumn property="username" title="${message(code: 'person.username.label', default: 'Username')}" />
 					
-						<g:sortableColumn property="password" title="${message(code: 'person.password.label', default: 'Password')}" />
-					
+			
 						<g:sortableColumn property="accountExpired" title="${message(code: 'person.accountExpired.label', default: 'Account Expired')}" />
 					
 						<g:sortableColumn property="accountLocked" title="${message(code: 'person.accountLocked.label', default: 'Account Locked')}" />
