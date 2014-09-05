@@ -29,7 +29,12 @@
                     </div>
 				</div>  
 
-				
+				<!--
+				<div class=" ${hasErrors(bean: personInstance, field: 'enabled', 'error')} ">
+
+					<g:checkBox name="enabled" value="${true}" />
+				</div> -->
+
 				<!-- URL
 				<div class=" ${hasErrors(bean: personInstance, field: 'webPage', 'error')} ">
 					<div class="form-group">
@@ -40,10 +45,6 @@
 				<div class="form-group">
              		<button class="btn btn-theme btn-lg btn-block" name="create" value="${message(default: 'Create')}">Cadastrar</button>
             	</div>
-
-            	<div class=" ${hasErrors(bean: personInstance, field: 'enabled', 'error')} ">
-					<g:checkBox name="enabled" value="${true}" />
-				</div> 
 
         	</div> <!-- Fim div col lg 06-->
 </div><!-- Fim div header-->
