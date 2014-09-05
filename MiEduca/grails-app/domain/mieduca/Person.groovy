@@ -4,7 +4,7 @@ class Person extends User{
 	
 	String email
 	int points = 0
-	String webPage
+	def webPage
 	byte[] photo
 
 	static belongsTo = Rank
@@ -12,8 +12,8 @@ class Person extends User{
     static constraints = {
     	email email:true, blank:false, unique:true
     	points editable: false, display: false
-    	photo maxSize: 1024 * 1024 * 10
-    	webPage url:true
+    	photo blank:true, maxSize: 1024 * 1024 * 10, display:false
+    	webPage blank:true, display:false
     }
 
     String toString(){
