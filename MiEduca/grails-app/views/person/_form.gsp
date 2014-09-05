@@ -8,7 +8,7 @@
   				<h1 class="text-center">Cadastre-se</h1>
 
 				<div class=" ${hasErrors(bean: personInstance, field: 'username', 'error')} required">
-						<g:message code="person.username.label" default="Username" />
+				
 					<g:textField name="username" required="" value="${personInstance?.username}"/>
 				</div>
 
