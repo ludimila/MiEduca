@@ -30,4 +30,12 @@ isOnBSTree queryContent (Node content leftBranch rightBranch)
     | queryContent > content  = isOnBSTree queryContent rightBranch  
 
 
+--Return:A sub BSTree of right of a main Node-- Param1: BSTree to get a sub tree--
+subTreeOfRight :: BSTree content -> BSTree content
+subTreeOfRight (Node leaf left right)  = right
+
+--Return:A sub BSTree of left of a main Node--  Param1: BSTree to get a sub tree--
+subTreeOfLeft :: BSTree content -> BSTree content
+subTreeOfLeft (Node leaf left right) = left
+
 	
