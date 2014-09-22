@@ -1,4 +1,4 @@
-module ListSetup
+module WordsTupleSetup
 (
 wordsTuple
 )where 
@@ -15,17 +15,17 @@ generateListFromFile  = do
 	text <- openFile "HangmanWords.txt" ReadMode
 	contents <- hGetContents text
 	let singlewords = words contents
-	--getWord singlewords
-	print singlewords
+	let hangmanWords = getHangmanWords singlewords
+	print hangmanWords
 	hClose text
-	return singlewords
+	return hangmanWords
 
--- Return: A list of Strins bigger than 6 characters will be inserted
-getWord :: [String] -> [String]
-getWord [] = []
-getWord (h:t)
-	| length h >= 5 = [h] ++ getWord (t)
-	| otherwise = getWord (t)
+-- Return: A list of Strins bigger than 4 characters will be inserted
+getHangmanWords :: [String] -> [String]
+getHangmanWords [] = []
+getHangmanWords (h:t) = if length h >= 5
+		then h : getHangmanWords t 
+		else getHangmanWords t 
 
 --Return: Dificulty of the word(number of different letters in a word-- Param1: array with letters of the word--
 defineWordDifficulty:: (Ord words) => [words] -> Int 

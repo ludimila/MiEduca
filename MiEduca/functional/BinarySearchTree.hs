@@ -1,3 +1,11 @@
+module BinarySearchTree(
+generateBSTreeFromList,
+isOnBSTree,
+getSubTreeOfRight,
+getSubTreeOfLeft,
+getCurrentNode
+) where
+
 -- This module contains all functions for manipulate a binary search tree -- 
 
 data BSTree content = Null
@@ -5,7 +13,7 @@ data BSTree content = Null
 	 	  deriving (Show, Read, Eq)  
 
 -- A Minimum element of type list is a leaf -- 
-leaf :: content -> BSTree content 
+leaf :: content -> BSTree content
 leaf content = Node content Null Null  
   
 -- Return: A new Binary Search Tree with new content -- Param1:Content that will be inserted -- Param2: Binary Serch Tree where the content will be inserted --
@@ -31,11 +39,15 @@ isOnBSTree queryContent (Node content leftBranch rightBranch)
 
 
 --Return:A sub BSTree of right of a main Node-- Param1: BSTree to get a sub tree--
-subTreeOfRight :: BSTree content -> BSTree content
-subTreeOfRight (Node leaf left right)  = right
+getSubTreeOfRight :: BSTree content -> BSTree content
+getSubTreeOfRight (Node leaf left right)  = right
 
 --Return:A sub BSTree of left of a main Node--  Param1: BSTree to get a sub tree--
-subTreeOfLeft :: BSTree content -> BSTree content
-subTreeOfLeft (Node leaf left right) = left
+getSubTreeOfLeft :: BSTree content -> BSTree content
+getSubTreeOfLeft (Node leaf left right) = left
+
+getCurrentNode :: BSTree content -> content
+getCurrentNode (Node leaf left right) = leaf
+
 
 	
