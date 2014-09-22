@@ -4,7 +4,6 @@ wordsTuple
 )where 
 
 import System.IO
-import Control.Monad
 import Data.List
 import Data.Char
 import System.IO.Unsafe
