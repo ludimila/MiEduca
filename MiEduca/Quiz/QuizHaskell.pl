@@ -4,25 +4,34 @@
 
 /*Content(Id,Discipline,Lesson,Page,Paragraph,Question,Aternative1,Alternative2,Alternative3,Alternative4,CorrectAlternative) */
 
-content(1,'Haskell',9,18,1,	'Haskell é uma linguagem de programação puramente?','orientada a objetos','funcional','imperativa','lógica',2).
-content(2,'Haskell',9,22,1,'Como são representadas funções para entrada e saída de dados em haskell?','putStrLn, getLine','scanf, fscanf','read, readln','ghci, ghcin',1).
-content(3,'Haskell',9,33,1,'O resultado da operacao succ 9*10 é :','91','90','100','0',3).
-content(4,'Haskell',9,45,1,'O paradigma funcional prioriza:','passagem por referencia','passagem por parametro','uso de parenteses','recursão',4).
-content(5,'Haskell',10,	8,2,'Para obter o elemento de uma lista em haskell pelo seu índice é utilizado o operador:','!!','>/','<>',':-',1).
-content(6, 'Haskell', 10,22,1,'O que essa função, definida por um gerador  [x*2 | x <- [1..10]], retorna?','os números pares 2, 4, 6, 8,10,12,14, 16, 18, 20','os números  de 1 a 10','Os números primos contidos entre 1 e 10','o tamanho da lista',1).
+content(1,'Haskell',9,18,1,	'Haskell e uma linguagem de programacao puramente?','orientada a objetos','funcional','imperativa','logica',2).
+content(2,'Haskell',9,22,1,'Como sao representadas funcao para entrada e saida de dados em haskell?','putStrLn, getLine','scanf, fscanf','read, readln','ghci, ghcin',1).
+content(3,'Haskell',9,33,1,'O resultado da operacao succ 9*10 e :','91','90','100','0',3).
+content(4,'Haskell',9,45,1,'O paradigma funcional prioriza:','passagem por referencia','passagem por parametro','uso de parenteses','recursao',4).
+content(5,'Haskell',10,	8,2,'Para obter o elemento de uma lista em haskell pelo seu índice e utilizado o operador:','!!','>/','<>',':-',1).
+content(6, 'Haskell', 10,22,1,'O que essa funcao, definida por um gerador  [x*2 | x <- [1..10]], retorna?','os numeros pares 2, 4, 6, 8,10,12,14, 16, 18, 20','os numeros  de 1 a 10','Os numeros primos contidos entre 1 e 10','o tamanho da lista',1).
 content(7,'Haskell',10,	38,1,'A travessia em ordem faz o seguinte percurso na ávore:','raiz -> subarvore direita -> subarvore esquerda','subarvore esquerda -> raiz -> subarvore direita','subarvore esquerda -> subarvore direita -> raiz','apenas as subarvores', 2).
-content(8,'Haskell',12,	4,1,'O que define um módulo em haskell?','uma coleção de listas','uma coleção de números','uma coleção de funções e tipos relacionados','não existe módulo em haskell',3).
-content(9, 'Haskell',12,47,1,'Qual a função da main em Haskell?','chamar outros modulos a partir desse modulo main','inicializar as variaves','diminuir a complexidade do codigo','realizar a função de um metodo construtor',1).
+content(8,'Haskell',12,	4,1,'O que define um modulo em haskell?','uma colecao de listas','uma colecao de numeros','uma colecao de funcao e tipos relacionados','não existe modulo em haskell',3).
+content(9, 'Haskell',12,47,1,'Qual a funcao da main em Haskell?','chamar outros modulos a partir desse modulo main','inicializar as variaves','diminuir a complexidade do codigo','realizar a funcao de um metodo construtor',1).
 content(10, 'Haskell',12,7,3,'Qual a palavra reservada utlizada para importar modulos em haskell?','include','import','inclusion','use',2).
-content(11,'Haskell',12,14,1,'O que a função fromList faz?','verifica se o elemento está contido na lista','lista todos os elementos da lista','deleta um elemento da lista','lista e mapeia associações',4).
+content(11,'Haskell',12,14,1,'O que a funcao fromList faz?','verifica se o elemento esta contido na lista','lista todos os elementos da lista','deleta um elemento da lista','lista e mapeia associações',4).
 content(12, 'Haskell',11,33,2,'Qual o interpretador da linguagem haskell?','MinGw','Dev','Sublime','GHCI',4).
 content(13,'Haskell',10,7,1,'Qual o resultado da operação  [1,2,3] ++ [4] ?','[1,2,3,4]','[1,2,3]','[1,2,3]','[1,2,3]','[1,2,3]','[1,2,3]','[4]','[10]',1).
-content(14, 'Haskell',10,8,1,'[1,2,3] é equivalente à ?','1,2,3','[1], [2], [3]','1:2:3:[]','1:2:3:',3).
+content(14, 'Haskell',10,8,1,'[1,2,3] e equivalente a ?','1,2,3','[1], [2], [3]','1:2:3:[]','1:2:3:',3).
+content(15,'Multiagentes',21,5,2,'Unidades Concorrentes podem ser executadas em: ','Unico processador','varios processadores compartilhando uma memoria','todas as alternativas estao corretas',4).
+content(16,'Multiagentes',21,9,1,'A concorrencia é dividida em diferentes niveis, qual esta errado','instrucao','conjunto','comando','unidade',2).
+content(17,'Multiagentes',21,39,1,'Em java qual metodo faz com que um recurso seja acessado atomicamente','suspend','notifyAll','syncronized','yield',3).
+content(18,'Multiagentes',21,50,1,'A sincronizacao de cooperacao em Java é obtida com os metodos','wait e notify','yeld e wait','notify e yeld','yeld e notifyAll',1).
+content(19,'Multiagentes',23,6,1,'Quais sao as três caracteriscas chaves de um Agente de Software','Colaborativo, Autonomia, Aprendizado','Cooperacao, Autonomia, Competicao','Cooperacao, Autonomia, Aprendizado','Cooperacao, Colaborativo, Aprendizado',3).
+content(20,'Multiagentes',23,12,1,'Quando um agente responde a mudancas do ambiente a tempo e de maneira apropriada corresponde a:','realividade','proatividade','interatividade','autonomia',1).
+content(21,'Multiagentes',23,13,1,'Quando um agente tem capacidade de atuar utilizando o conhecimento adiquirido diante o conexto, corresponte a:','Aprendizagem','racionalidade','mobilidade','proatividade',2).
+content(22,'Multiagentes',23,13,1,'Quando um agente tem capacidade de melhorar seu desempenho com o passar do tempo, corresponde a:','racionalidade','autonomia','interatividade','Aprendizagem',4).
+content(23,'Multiagentes',24,25,1,'A classe Agente possui as seguintes constantes exceto:','AP_INITIATED ','AP_ACTIVE','AP_FINESHED','AP_SUSPENDED',3).
 
 
 gamePoint(0).
 /*Total of questions stored on database*/
-numberOfQuestions(14).
+numberOfQuestions(23).
 
 /*Binary relationships of the content*/
 discipline(Id,Discipline) :- content(Id,Discipline,_,_,_,_,_,_,_,_,_) ; recomendations(Id,Discipline,_,_,_).
