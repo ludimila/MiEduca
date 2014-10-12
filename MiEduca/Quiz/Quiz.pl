@@ -48,7 +48,7 @@ quizItem(Id) :-
 	alternative(Id,4,FourthAlternative),write('  4)'),write(FourthAlternative),nl,
 	write('  5)Terminar Jogo'),nl,
 	read(Choice),
-	ifThenElse(Choice=:=5,gameOver,answer(id,Choice)).
+	ifThenElse(Choice=:=5,gameOver,answer(Id,Choice)).
 	
 ifThenElse(X, Y, _) :- X, !, Y. 
 ifThenElse(_, _, Z) :- Z.
