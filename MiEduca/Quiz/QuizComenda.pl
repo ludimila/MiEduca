@@ -29,7 +29,7 @@ content(22,'Multiagentes',23,13,1,'Quando um agente tem capacidade de melhorar s
 content(23,'Multiagentes',24,25,1,'A classe Agente possui as seguintes constantes exceto:','AP_INITIATED ','AP_ACTIVE','AP_FINESHED','AP_SUSPENDED',3).
 content(24,'Prolog',14,5,1,'Quais dois elementos disjuntos que constituem um algoritmo de programacao logica?','Logica e Controle','Controle e Condicao','Logica e Condicao','Condicao e Recursividade',1).
 content(25,'Prolog',14,5,4,'Qual o paradigma fundamental da programacao logica ?','Programacao Procedimental','Programacao Declarativa','Programacao Recursiva','Programacao Implicita',2).
-content(26,'Prolog',14,6,2,'Pode-se expressar conhecimento em Prolog por meio de clausulas de dois tipos:','Fatos e Condicoes','Fatos e Condicoes','Fatos e Condicoes','Fatos e Condicoes',4).
+content(26,'Prolog',14,6,2,'Pode-se expressar conhecimento em Prolog por meio de clausulas de dois tipos:','Fatos e Condicoes','Regras e Condicoes','Fatos e Exemplos','Fatos e Regras',4).
 content(27,'Prolog',14,6,3,'Assina-le a alternativa incorreta. Os sistemas de programacao logica em geral, possuem as seguintes propriedades:','nao sao naturalmente recursivas','Possuem capacidade dedutiva','Permitem a representacao de relacoes reversiveis','Operam de forma nao deterministicas',1).
 content(28,'Prolog',14,10,4,'No WIN-PROLOG a funcao "Consult" tem o seguinte papel:','Consultar uma base de dados web','Consultar um banco de dados MYSQL','Carregar o programa no interpretador','Fechar o interpretador',3).
 content(29,'Prolog',14,14,1,'Qual a correta representacao de um atomo em prolog?','12Atomo','Atomo12','atomo12','12atomo',3).
