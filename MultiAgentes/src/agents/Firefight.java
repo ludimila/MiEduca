@@ -20,6 +20,8 @@ public class Firefight extends Agent{
 		getMessage();
 	
 	} 
+	
+	
 
 	protected void getMessage() {
 		addBehaviour(new CyclicBehaviour (this){
