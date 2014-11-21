@@ -3,9 +3,7 @@ package agents;
 import java.util.Random;
 
 import jade.core.Agent;
-import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.OneShotBehaviour;
-import jade.lang.acl.ACLMessage;
 import jade.wrapper.AgentController;
 import jade.wrapper.ControllerException;
 import jade.wrapper.PlatformController;
@@ -15,11 +13,11 @@ public class House extends Agent {
 
 	private static final long serialVersionUID = 1L;
 
-	private static final int SIZE = 2;
-	private int house[][] = new int[SIZE][SIZE];
+	private static final int SIZE = 10;
 	public static AgentController victimAgent;
-	public static final int VICTIM = 1;
-	public static final int FIRE = 0;
+	public static final int VICTIM = 2;
+	public static final int FIRE = 1;
+	private int house[][] = {{0,0,0}, {0,0,0}, {0,0,0}};
 
 	public void setup() {
 		super.setup();
@@ -42,11 +40,12 @@ public class House extends Agent {
 			this.victimAgent.start();
 
 		} catch (ControllerException e) {
+			System.out.println("o Agente não foi criado");
 			e.printStackTrace();
 		}
 	}
 
-	private class Location extends CyclicBehaviour {
+	private class Location extends OneShotBehaviour {
 
 		private static final long serialVersionUID = 1L;
 
@@ -57,7 +56,6 @@ public class House extends Agent {
 
 		@Override
 		public void action() {
-			
 			setVictimLocation();
 			setFirePosition();
 
@@ -65,34 +63,16 @@ public class House extends Agent {
 
 		private void setFirePosition() {
 
-			int fireMatrix[][] = new int[SIZE][SIZE];
-			int line, column;
-
-			Random random = new Random();
-
-			line = random.nextInt(SIZE);
-			column = random.nextInt(SIZE);
-
-			for (int countLine = line; countLine <= SIZE; countLine++) {
-				for (int countColumn = column; countColumn <= SIZE; countColumn++) {
-
+			for (int countLine = 0; countLine < house.length; countLine++) {
+				for (int countColumn = 0; countColumn < house[countLine].length; countColumn++) {
 					
-					
-					System.out.println("Incrementando  --->> X=" + countLine + " Y= " + countColumn);
-					
-					if(fireMatrix[countLine][countColumn] == VICTIM){
-						
-						System.out.println("valor do veotor: " + fireMatrix[countLine][countColumn]);
-						
-						System.out.println("Posição do fogo:  ( X = " + line + "  Y= " + column + ")");
-						System.out.println("Vítima alcançada");
-						continue;
+					if(house[countLine][countColumn] == VICTIM){
+						System.out.println("Posição do fogo:  ( X = " + countLine + "  Y= " + countLine + ")");
+						System.out.println("Vítima alcançada pelo fogo");
 					}else{
-						fireMatrix[countLine][countColumn] = FIRE;
-						System.out.println("entrou no else");
+						house[countLine][countColumn] = FIRE;
 					}
-
-				}
+				}				
 			}
 
 		}
@@ -108,11 +88,10 @@ public class House extends Agent {
 			y = random.nextInt(SIZE);
 
 				try {
-					if (victimAgent.getName().equals(
-							"Vitima@192.168.1.119:1099/JADE")) {
+					
+					if (victimAgent.getName().equals("Vitima@192.168.25.16:1099/JADE")) {
 
-						System.out.println("Posição da vitima: (X= " + x
-								+ "  Y= " + y + ") definida");
+						System.out.println("Posição da vitima: (X= " + x + "  Y= " + y);
 						 house[x][y] = VICTIM;
 					}
 
@@ -121,6 +100,5 @@ public class House extends Agent {
 				}
 
 			}
-
 	}
 }
